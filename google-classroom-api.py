@@ -6,7 +6,14 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 # Definir el alcance de la API (modificar según necesidades)
-SCOPES = ['https://www.googleapis.com/auth/classroom.courses.readonly']
+SCOPES = [
+    'https://www.googleapis.com/auth/classroom.courses.readonly',
+    'https://www.googleapis.com/auth/classroom.rosters.readonly',
+    'https://www.googleapis.com/auth/classroom.student-submissions.students.readonly',
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile',
+    'openid'
+]
 
 def main():
     creds = None
