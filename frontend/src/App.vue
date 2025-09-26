@@ -1,21 +1,7 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-toolbar-title>
-          Semillero Digital - Dashboard
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-header>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
+  <router-view />
 </template>
 
-<script>
-export default {
-  name: 'App'
-}
+<script setup>
+  // No script needed
 </script>

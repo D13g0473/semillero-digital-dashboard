@@ -7,6 +7,10 @@ from classroom.routes import api_bp
 app = Flask(__name__)
 
 # Clave secreta para manejar sesiones
+
+
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-key-change-me")
 
 # Configurar CORS para permitir peticiones desde el frontend

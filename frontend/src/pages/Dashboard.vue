@@ -17,6 +17,7 @@
         :rows="courses"
         :columns="columns"
         row-key="id"
+        v-model:pagination="pagination"
       />
     </div>
   </q-page>
@@ -29,6 +30,12 @@ import { api } from '../boot/axios';
 const courses = ref([]);
 const loading = ref(true);
 const error = ref(null);
+const pagination = ref({
+  sortBy: 'name',
+  descending: false,
+  page: 1,
+  rowsPerPage: 10
+});
 
 const columns = [
   { name: 'name', required: true, label: 'Nombre del Curso', align: 'left', field: 'name', sortable: true },
